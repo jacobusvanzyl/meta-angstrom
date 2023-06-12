@@ -7,9 +7,9 @@ PR = "r13"
 inherit packagegroup
 
 # for backwards compatibility
-RPROVIDES_${PN} += "packagegroup-gnome3-perl"
+RPROVIDES:${PN} += "packagegroup-gnome3-perl"
 
-RDEPENDS_${PN} = " \
+RDEPENDS:${PN} = " \
   perl \
   libxml-parser-perl \
 "

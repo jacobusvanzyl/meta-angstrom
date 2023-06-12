@@ -6,7 +6,7 @@ PR = "r13"
 
 inherit packagegroup
 
-RDEPENDS_${PN} = " \
+RDEPENDS:${PN} = " \
   packagegroup-gnome-fonts \
   packagegroup-gnome \
   packagegroup-gnome-gstreamer \
@@ -16,7 +16,7 @@ RDEPENDS_${PN} = " \
   angstrom-skel-gnome2 \
 "
 
-RRECOMMENDS_${PN} = " \
+RRECOMMENDS:${PN} = " \
    packagegroup-core-x11-xserver \
 "
 

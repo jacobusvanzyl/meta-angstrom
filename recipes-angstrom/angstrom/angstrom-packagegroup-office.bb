@@ -6,7 +6,7 @@ PR = "r32"
 
 inherit packagegroup
 
-RDEPENDS_${PN} = "\
+RDEPENDS:${PN} = "\
     gnumeric \
     abiword \
     imposter \

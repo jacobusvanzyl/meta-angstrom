@@ -15,7 +15,7 @@ DEPENDS = "packagegroup-boot"
 #
 # minimal set of packages - needed to boot
 #
-RDEPENDS_${PN} = "\
+RDEPENDS:${PN} = "\
 	packagegroup-boot \
 	angstrom-version \
     "

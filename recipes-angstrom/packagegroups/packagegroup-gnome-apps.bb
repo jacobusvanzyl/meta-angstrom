@@ -6,7 +6,7 @@ PR = "r13"
 
 inherit packagegroup
 
-RDEPENDS_${PN} = " \
+RDEPENDS:${PN} = " \
   x11vnc \
   gnome-terminal \
   epiphany \

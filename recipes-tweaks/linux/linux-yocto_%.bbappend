@@ -1,15 +1,15 @@
 # Enable more linux-yocto features for various machines
 
-FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
+FILESEXTRAPATHS:prepend := "${THISDIR}/${PN}:"
 
-SRC_URI_append_fri2 = " file://bt.cfg \ 
+SRC_URI:append_fri2 = " file://bt.cfg \ 
                         file://rtc-iio.cfg \
                         file://hwmon.cfg \
                         file://iotop.cfg \
                         file://no8042.cfg \
                         file://nopchcan.cfg \
                       "
-KERNEL_FEATURES_append_fri2 = " \
+KERNEL_FEATURES:append_fri2 = " \
                                   features/netfilter/netfilter.scc \
                                   features/usb-net/usb-net.scc \
                                   features/wifi/wifi-all.scc \

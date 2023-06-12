@@ -4,7 +4,7 @@ LICENSE = "BSD"
 SECTION = "x11"
 
 DEPENDS = "edje-native"
-RRECOMMENDS_${PN} = "exquisite"
+RRECOMMENDS:${PN} = "exquisite"
 
 PR = "r1"
 PV = "1.2"
@@ -32,5 +32,5 @@ do_install() {
 }
 
 PACKAGE_ARCH = "all"
-CONFFILES_${PN} = "${sysconfdir}/exquisite/config-angstrom"
-FILES_${PN} = "${sysconfdir}/exquisite ${datadir}/exquisite/data/themes"
+CONFFILES:${PN} = "${sysconfdir}/exquisite/config-angstrom"
+FILES:${PN} = "${sysconfdir}/exquisite ${datadir}/exquisite/data/themes"

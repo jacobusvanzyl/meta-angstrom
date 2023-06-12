@@ -17,7 +17,7 @@ XSERVER ?= "xserver-xorg \
 
 DEPENDS = "virtual/xserver"
 
-RDEPENDS_${PN} = "\
+RDEPENDS:${PN} = "\
     ${XSERVER} \
     dbus-x11 \
     ttf-dejavu-sans \

@@ -6,7 +6,7 @@ PR = "r33"
 
 inherit packagegroup
 
-RDEPENDS_${PN} = "\
+RDEPENDS:${PN} = "\
     nmap \
     ettercap-ng \
     stunnel \

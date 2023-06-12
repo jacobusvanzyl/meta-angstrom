@@ -6,7 +6,7 @@ PR = "r36"
 
 inherit packagegroup
 
-RDEPENDS_${PN} = "\
+RDEPENDS:${PN} = "\
     matchbox-panel-manager \
     mboxkbd-layouts-gui \
     gpe-su \

@@ -19,6 +19,6 @@ PACKAGES =+ "angstrom-skel-htop \
              angstrom-skel-gnome2 \
             "
 
-FILES_angstrom-skel-htop = "${sysconfdir}/skel/.config/htop" 
-FILES_angstrom-skel-gnome2 = "${sysconfdir}/skel/.config/gconf" 
+FILES:angstrom-skel-htop = "${sysconfdir}/skel/.config/htop" 
+FILES:angstrom-skel-gnome2 = "${sysconfdir}/skel/.config/gconf" 
 

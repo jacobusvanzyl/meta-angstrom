@@ -44,9 +44,9 @@ require conf/distro/include/angstrom-java.inc
 #    the selected arm architecture.
 
 ARM_INSTRUCTION_SET ??= "thumb"
-ARM_INSTRUCTION_SET_armv4 ?= "arm"
-ARM_INSTRUCTION_SET_armv5 ?= "arm"
-ARM_INSTRUCTION_SET_armv6 ?= "arm"
+ARM_INSTRUCTION_SET:armv4 ?= "arm"
+ARM_INSTRUCTION_SET:armv5 ?= "arm"
+ARM_INSTRUCTION_SET:armv6 ?= "arm"
 
 #Use this variable in feeds and other parts that need a URI
 ANGSTROM_URI ?= "http://feeds.angstrom-distribution.org"
@@ -66,13 +66,13 @@ INHERIT += "debian"
 INHERIT += "sanity" 
 
 #activate the blacklister
-INHERIT += "blacklist"
+# INHERIT += "blacklist"
 
 #make devshell available as task
 INHERIT += "devshell" 
 
 #use angstrom source mirrors to combat 404s
-INHERIT += "angstrom-mirrors" 
+# INHERIT += "angstrom-mirrors" 
 
 #run QA tests on builds and packages and log them  
 INHERIT += "insane"
@@ -105,8 +105,8 @@ MACHINE_KERNEL_PR ??= "r0"
 # We don't want to keep OABI compat
 ARM_KEEP_OABI = "0"
 # Do keep OABI compat for om-gta01 to keep the gllin binary working
-ARM_KEEP_OABI_pn-linux-openmoko-2.6.24_om-gta01 = "1"
-ARM_KEEP_OABI_pn-linux-openmoko-2.6.28_om-gta01 = "1"
+ARM_KEEP_OABI:pn-linux-openmoko-2.6.24_om-gta01 = "1"
+ARM_KEEP_OABI:pn-linux-openmoko-2.6.28_om-gta01 = "1"
 
 
 #Generate locales on the buildsystem instead of on the target. Speeds up first boot, set to "1" to enable
@@ -120,10 +120,10 @@ LOCALE_UTF8_ONLY = "1"
 ENABLE_BINARY_LOCALE_GENERATION_ep9312 = "0"
 
 #qemu has taken a dislike to armeb as well
-ENABLE_BINARY_LOCALE_GENERATION_armeb = "0"
+ENABLE_BINARY_LOCALE_GENERATION:armeb = "0"
 
 # Prelink images
-INHERIT += "image-prelink"
+# INHERIT += "image-prelink"
 
 #Name the generated images in a sane way
 IMAGE_NAME = "${DISTRO_NAME}-${IMAGE_BASENAME}-${TCLIBC}-${ANGSTROM_PKG_FORMAT}-${DISTRO_VERSION}-${MACHINE}"

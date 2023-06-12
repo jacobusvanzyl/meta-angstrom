@@ -30,23 +30,23 @@ EXTRA_OECMAKE += " \
                   -DUSE_SYSTEM_EVENT2=1 \
                  "
 
-do_install_append() {
+do_install:append() {
 	install -d ${D}${nonarch_base_libdir}/systemd/system
 	install -m 0644 ${S}/daemon/transmission-daemon.service ${D}${nonarch_base_libdir}/systemd/system
 }
 
 PACKAGES += "${PN}-gui ${PN}-client"
 
-FILES_${PN}-client = "${bindir}/transmission-remote ${bindir}/transmission-cli ${bindir}/transmission-create ${bindir}/transmission-show ${bindir}/transmission-edit"
-FILES_${PN}-gui += "${bindir}/transmission-gtk ${datadir}/icons ${datadir}/applications ${datadir}/pixmaps"
+FILES:${PN}-client = "${bindir}/transmission-remote ${bindir}/transmission-cli ${bindir}/transmission-create ${bindir}/transmission-show ${bindir}/transmission-edit"
+FILES:${PN}-gui += "${bindir}/transmission-gtk ${datadir}/icons ${datadir}/applications ${datadir}/pixmaps"
 
-FILES_${PN} = "${bindir}/transmission-daemon ${datadir}/transmission ${sysconfdir}"
+FILES:${PN} = "${bindir}/transmission-daemon ${datadir}/transmission ${sysconfdir}"
 
-SYSTEMD_SERVICE_${PN} = "transmission-daemon.service"
+SYSTEMD_SERVICE:${PN} = "transmission-daemon.service"
 
 USERADD_PACKAGES = "${PN}"
-GROUPADD_PARAM_${PN} = "--system transmission"
-USERADD_PARAM_${PN} = "--home ${localstatedir}/lib/transmission-daemon --create-home \
+GROUPADD_PARAM:${PN} = "--system transmission"
+USERADD_PARAM:${PN} = "--home ${localstatedir}/lib/transmission-daemon --create-home \
                        --gid transmission \
                        --shell ${base_bindir}/false \
                        --system \

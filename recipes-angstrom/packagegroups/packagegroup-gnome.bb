@@ -6,7 +6,7 @@ PR = "r15"
 
 inherit packagegroup
 
-RDEPENDS_${PN} = " \
+RDEPENDS:${PN} = " \
   gsettings-desktop-schemas gnome-common-schemas \
   gnome-settings-daemon gnome-control-center \
   gnome-keyring \
@@ -25,4 +25,4 @@ RDEPENDS_${PN} = " \
   angstrom-skel-gnome2 \
 "
 
-RRECOMMENDS_${PN} = "ofono"
+RRECOMMENDS:${PN} = "ofono"

@@ -3,9 +3,9 @@ LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/MIT;md5=0835ade698e0bcf8506ecda2f7b4f302"
 
 inherit allarch
-ALLOW_EMPTY_${PN} = "1"
+ALLOW_EMPTY:${PN} = "1"
 
-pkg_postinst_${PN}() {
+pkg_postinst:${PN}() {
 #!/bin/sh
 grep "xfce" $D/etc/gdm/custom.conf
 if [ $? -eq 0 ]; then
@@ -15,4 +15,4 @@ else
 fi
 }
 
-RDEPENDS_${PN} = "gdm"
+RDEPENDS:${PN} = "gdm"

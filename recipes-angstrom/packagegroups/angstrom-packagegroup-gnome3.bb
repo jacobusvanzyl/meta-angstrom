@@ -6,7 +6,7 @@ PR = "r6"
 
 inherit packagegroup
 
-RDEPENDS_${PN} = " \
+RDEPENDS:${PN} = " \
   packagegroup-gnome3-fonts \
   packagegroup-gnome3 \
   packagegroup-gnome3-gstreamer \
@@ -15,7 +15,7 @@ RDEPENDS_${PN} = " \
   packagegroup-gnome3-xserver-base \
 "
 
-RRECOMMENDS_${PN} = " \
+RRECOMMENDS:${PN} = " \
    packagegroup-core-x11-xserver \
 "
 

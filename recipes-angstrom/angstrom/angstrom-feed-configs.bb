@@ -41,7 +41,7 @@ do_install () {
 	install -m 0644  ${S}/${sysconfdir}/opkg/* ${D}${sysconfdir}/opkg/
 }
 
-FILES_${PN} = "${sysconfdir}/opkg/base-feed.conf \
+FILES:${PN} = "${sysconfdir}/opkg/base-feed.conf \
 					${sysconfdir}/opkg/debug-feed.conf \
 					${sysconfdir}/opkg/perl-feed.conf \
 					${sysconfdir}/opkg/python-feed.conf \
@@ -52,7 +52,7 @@ FILES_${PN} = "${sysconfdir}/opkg/base-feed.conf \
 					${sysconfdir}/opkg/sdk-feed.conf \
 					"
 
-CONFFILES_${PN} += "${sysconfdir}/opkg/base-feed.conf \
+CONFFILES:${PN} += "${sysconfdir}/opkg/base-feed.conf \
 					${sysconfdir}/opkg/debug-feed.conf \
 					${sysconfdir}/opkg/perl-feed.conf \
 					${sysconfdir}/opkg/python-feed.conf \
@@ -62,9 +62,9 @@ CONFFILES_${PN} += "${sysconfdir}/opkg/base-feed.conf \
 					${sysconfdir}/opkg/sdk-feed.conf \
 					"
 
-RRECOMMENDS_${PN} += "opkg"
+RRECOMMENDS:${PN} += "opkg"
 
-python populate_packages_prepend () {
+python populate_packages:prepend () {
     etcdir = bb.data.expand('${sysconfdir}/opkg', d)
     do_split_packages(d, etcdir, '^locale-(.*)\.conf$', 'angstrom-locale-%s-config', 'Angstrom feed config for the %s locale', extra_depends='', allow_links=True)
 }

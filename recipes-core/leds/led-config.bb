@@ -31,9 +31,9 @@ do_install () {
 
 NATIVE_SYSTEMD_SUPPORT = "1"
 SYSTEMD_PACKAGES = "${PN}"
-SYSTEMD_SERVICE_${PN} = "leds.service"
+SYSTEMD_SERVICE:${PN} = "leds.service"
 
-FILES_${PN} += "${base_libdir}/systemd"
-CONFFILES_${PN} += "${sysconfdir}/default/leds \
+FILES:${PN} += "${base_libdir}/systemd"
+CONFFILES:${PN} += "${sysconfdir}/default/leds \
                    "
 

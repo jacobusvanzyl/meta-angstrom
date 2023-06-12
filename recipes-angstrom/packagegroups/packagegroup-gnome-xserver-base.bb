@@ -7,9 +7,9 @@ PR = "r13"
 inherit packagegroup
 
 # for backwards compatibility
-RPROVIDES_${PN} += "packagegroup-gnome3-xserver-base"
+RPROVIDES:${PN} += "packagegroup-gnome3-xserver-base"
 
-RDEPENDS_${PN} = " \
+RDEPENDS:${PN} = " \
   dbus-x11 \
   iso-codes \
   mime-support \

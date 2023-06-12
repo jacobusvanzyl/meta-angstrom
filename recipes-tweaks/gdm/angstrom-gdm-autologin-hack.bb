@@ -6,9 +6,9 @@ LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/MIT;md5=0835ade698e0bcf8506ecda
 PR = "r1"
 
 PACKAGE_ARCH = "all"
-ALLOW_EMPTY_${PN} = "1"
+ALLOW_EMPTY:${PN} = "1"
 
-pkg_postinst_${PN}() {
+pkg_postinst:${PN}() {
 #!/bin/sh
 grep "TimedLogin" $D/etc/gdm/custom.conf
 if [ $? -eq 0 ]; then
@@ -25,4 +25,4 @@ EOF
 fi
 }
 
-RDEPENDS_${PN} = "gdm"
+RDEPENDS:${PN} = "gdm"

@@ -7,9 +7,9 @@ PR = "r13"
 inherit packagegroup
 
 # for backwards compatibility
-RPROVIDES_${PN} += "packagegroup-gnome3-themes"
+RPROVIDES:${PN} += "packagegroup-gnome3-themes"
 
-RDEPENDS_${PN} = " \
+RDEPENDS:${PN} = " \
   angstrom-gnome-icon-theme-enable \
   gnome-icon-theme \
   gnome-themes \

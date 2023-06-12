@@ -29,7 +29,7 @@ do_install() {
 	done
 }
 
-FILES_${PN} += "/boot"
+FILES:${PN} += "/boot"
 
 addtask deploy before do_package after do_install
 

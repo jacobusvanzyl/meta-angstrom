@@ -7,7 +7,7 @@ PR = "r13"
 inherit packagegroup
 
 # for backwards compatibility
-RPROVIDES_${PN} += "packagegroup-gnome3-gstreamer"
+RPROVIDES:${PN} += "packagegroup-gnome3-gstreamer"
 
 DEPENDS = " \
   gst-plugins-base \
@@ -16,7 +16,7 @@ DEPENDS = " \
   gst-plugins-ugly \
 "
 
-RDEPENDS_${PN} = " \
+RDEPENDS:${PN} = " \
   gst-ffmpeg \
   gst-plugins-base-meta \
 "

@@ -16,7 +16,7 @@ do_install() {
 	install -m 0644 ${WORKDIR}/x11vnc.desktop ${D}${sysconfdir}/xdg/autostart/ 
 }
 
-RDEPENDS_${PN} = "x11vnc"
-CONFFILES_${PN} += "${sysconfdir}/X11/Xinit.d/02vnc ${sysconfdir}/xdg/autostart/x11vnc.desktop"
+RDEPENDS:${PN} = "x11vnc"
+CONFFILES:${PN} += "${sysconfdir}/X11/Xinit.d/02vnc ${sysconfdir}/xdg/autostart/x11vnc.desktop"
 PACKAGE_ARCH = "all"
 

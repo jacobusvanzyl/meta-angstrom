@@ -8,7 +8,7 @@ PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 inherit packagegroup
 
-RDEPENDS_${PN} = "\
+RDEPENDS:${PN} = "\
     gpe-scap \
     matchbox \
     matchbox-panel-hacks \
@@ -40,7 +40,7 @@ RDEPENDS_${PN} = "\
     ${@bb.utils.contains("COMBINED_FEATURES", "bluetooth", "gnome-bluetooth", "",d)} \
     "
 
-RRECOMMENDS_${PN} = " \
+RRECOMMENDS:${PN} = " \
     gpe-theme-clearlooks \
     xcursor-transparent-theme \
 "

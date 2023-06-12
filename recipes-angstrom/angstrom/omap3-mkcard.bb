@@ -14,5 +14,5 @@ do_install() {
 }
 
 PACKAGE_ARCH_${PN} = "all"
-RDEPENDS_${PN} = "bc dosfstools e2fsprogs-mke2fs util-linux util-linux-sfdisk"
+RDEPENDS:${PN} = "bc dosfstools e2fsprogs-mke2fs util-linux util-linux-sfdisk"
 

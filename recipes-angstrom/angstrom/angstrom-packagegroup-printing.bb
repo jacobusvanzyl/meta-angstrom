@@ -6,6 +6,6 @@ PR = "r32"
 
 inherit packagegroup
 
-RDEPENDS_${PN} = "\
+RDEPENDS:${PN} = "\
     cups \
     "

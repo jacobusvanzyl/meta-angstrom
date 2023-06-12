@@ -6,7 +6,7 @@ PR = "r7"
 
 inherit packagegroup allarch
 
-RDEPENDS_${PN} = " \
+RDEPENDS:${PN} = " \
   avahi-daemon \
   pulseaudio-server \
   pulseaudio-module-udev-detect \
@@ -24,7 +24,7 @@ RDEPENDS_${PN} = " \
   pulseaudio-module-suspend-on-idle \
 "
 
-pkg_postinst_${PN} () {
+pkg_postinst:${PN} () {
 #!/bin/sh
 if [ "x$D" != "x" ]; then
         exit 1

@@ -1,4 +1,4 @@
-PREMIRRORS_append () {
+PREMIRRORS:append () {
 cvs://.*/.* http://sources.angstrom-distribution.org/v2021.06/
 svn://.*/.* http://sources.angstrom-distribution.org/v2021.06/
 git://.*/.* http://sources.angstrom-distribution.org/v2021.06/
@@ -8,7 +8,7 @@ osc://.*/.* http://sources.angstrom-distribution.org/v2021.06/
 p4://.*/.*  http://sources.angstrom-distribution.org/v2021.06/
 }
 
-MIRRORS_append () {
+MIRRORS:append () {
 ftp://.*/.*	http://sources.angstrom-distribution.org/v2021.06/
 https?$://.*/.*	http://sources.angstrom-distribution.org/v2021.06/
 }

@@ -1,4 +1,4 @@
-FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
+FILESEXTRAPATHS:prepend := "${THISDIR}/${PN}:"
 
 PR = "r2"
 
@@ -48,4 +48,4 @@ PACKAGECONFIG   = " \
                    lz4 \
 "
 # fix pager corruption with busybox less/more
-RRECOMMENDS_${PN} += "less"
+RRECOMMENDS:${PN} += "less"

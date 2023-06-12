@@ -22,7 +22,7 @@ POLKIT_OECONF_libc-uclibc = "--disable-default-service"
 EXTRA_OECONF = "--enable-shared --disable-static --enable-debug=yes \
                 --disable-introspection --disable-orbit --with-openldap=no ${POLKIT_OECONF} --enable-gtk"
 
-do_install_append() {
+do_install:append() {
 	rm -rf ${D}${sysconfdir}
 	rm -rf ${D}${bindir} ${D}${includedir} ${D}${datadir}
 	rm -f ${D}${libexecdir}/*defaults* rm -f ${D}${libexecdir}/gconfd*
@@ -34,9 +34,9 @@ do_install_append() {
 }
 
 # disable dbus-x11 when x11 isn't in DISTRO_FEATURES
-RDEPENDS_${PN} += "gconf"
+RDEPENDS:${PN} += "gconf"
 
-ALLOW_EMPTY_${PN} = "1"
-FILES_${PN} += "${libexecdir}/*sanity* \
+ALLOW_EMPTY:${PN} = "1"
+FILES:${PN} += "${libexecdir}/*sanity* \
                 ${prefix}/libexec/ \
                "

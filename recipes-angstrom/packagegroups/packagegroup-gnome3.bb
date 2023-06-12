@@ -6,7 +6,7 @@ PR = "r6"
 
 inherit packagegroup
 
-RDEPENDS_${PN} = " \
+RDEPENDS:${PN} = " \
   gnome-settings-daemon gnome-control-center \
   gnome-keyring \
   gdm-systemd angstrom-gdm-autologin-hack \

@@ -23,8 +23,8 @@ do_install () {
 
 NATIVE_SYSTEMD_SUPPORT = "1"
 SYSTEMD_PACKAGES = "${PN}"
-SYSTEMD_SERVICE_${PN} = "cpu-schedutil.timer"
+SYSTEMD_SERVICE:${PN} = "cpu-schedutil.timer"
 
-FILES_${PN} += "${base_libdir}/systemd"
-RDEPENDS_${PN} = "cpufrequtils"
+FILES:${PN} += "${base_libdir}/systemd"
+RDEPENDS:${PN} = "cpufrequtils"
 

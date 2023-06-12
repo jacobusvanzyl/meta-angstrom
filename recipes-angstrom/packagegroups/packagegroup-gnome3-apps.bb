@@ -6,7 +6,7 @@ PR = "r6"
 
 inherit packagegroup
 
-RDEPENDS_${PN} = " \
+RDEPENDS:${PN} = " \
   x11vnc \
   matchbox-terminal \
   epiphany \

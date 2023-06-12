@@ -5,11 +5,11 @@ LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/MIT;md5=0835ade698e0bcf8506ecda
 inherit allarch
 PR = "r1"
 
-RDEPENDS_${PN} = "gtk-theme-clearlooks"
+RDEPENDS:${PN} = "gtk-theme-clearlooks"
 
-ALLOW_EMPTY_${PN} = "1"
+ALLOW_EMPTY:${PN} = "1"
 
-pkg_postinst_${PN}() {
+pkg_postinst:${PN}() {
 #!/bin/sh
 mkdir -p $D${sysconfdir}/gtk-2.0
 touch $D${sysconfdir}/gtk-2.0/gtkrc

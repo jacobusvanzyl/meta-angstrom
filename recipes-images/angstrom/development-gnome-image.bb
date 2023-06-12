@@ -6,7 +6,7 @@ require systemd-image.bb
 
 EXTRA_IMAGE_FEATURES += "splash"
 ARCHTOOLS = ""
-ARCHTOOLS_x86 = "dmidecode"
+ARCHTOOLS:x86 = "dmidecode"
 
 IMAGE_INSTALL += " \
 	xinput-calibrator \

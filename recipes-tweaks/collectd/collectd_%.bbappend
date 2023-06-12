@@ -1,1 +1,1 @@
-PACKAGECONFIG_append_angstrom = " iptables libatasmart snmp sensors"
+PACKAGECONFIG:append_angstrom = " iptables libatasmart snmp sensors"
